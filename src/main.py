@@ -5,9 +5,10 @@
 import numpy as np
 from os import path
 
-if __name__ == __main__():
+if __name__ == '__main__':
     main_path = path.abspath(__file__)
-    folder_path = main_path.dirpath(main_path)
+    src_path = path.dirname(main_path)
+    folder_path = path.dirname(src_path)
     input_path = path.join(folder_path, 'input')
     output_path = path.join(folder_path, 'output')
     # This is the only input file. It contains the starting critical states
